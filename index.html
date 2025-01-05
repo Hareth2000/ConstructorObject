@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Q1
+        const person = [
+            { firstName: 'Ahmad', lastName: 'Ali' },
+            { firstName: 'Sara', lastName: 'Hassan' },
+            { firstName: 'Yousef', lastName: 'Omar' },
+            { firstName: 'Layla', lastName: 'Nasser' },
+            { firstName: 'Khalid', lastName: 'Salem' }
+        ]
+
+        const result = [];
+        function firstNamefun(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                result.push(arr[i].firstName);
+            }
+
+            return result;
+        }
+        let finalResult = firstNamefun(person);
+
+        console.log(finalResult);
+        /////////////////////////////////////////////////////////////////////////////////////
+
+        //Q2 
+        const obj = {
+            name: "hareth",
+            age: 24,
+            city: "Amman"
+        };
+
+        function printKeyAndValue(obj) {
+            return Object.entries(obj).flat();
+
+        }
+
+        const resultobj = printKeyAndValue(obj);
+        console.log(resultobj);
+
+        //Q3 
+
+        function Car(brand, model, year) {
+            this.brand = brand;
+            this.model = model;
+            this.year = year;
+
+            this.Details = function () {
+                return `Brand: ${this.brand}, Model: ${this.model}, Year: ${this.year}`;
+            };
+        }
+
+        const car1 = new Car("mercedes", "W124", 1991);
+        const car2 = new Car("Honda", "Civic", 2018);
+        const car3 = new Car("Ford", "Focus", 2022);
+
+
+        const cars = [car1, car2, car3];
+
+        for (let i = 0; i < cars.length; i++) {
+            console.log(cars[i].Details());
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
